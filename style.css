@@ -1,0 +1,76 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: #050a05; /* Çok koyu yeşil arka plan */
+    color: #e0e0e0;
+    font-family: 'Segoe UI', sans-serif;
+    min-height: 100vh;
+}
+
+header {
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(10, 20, 10, 0.95);
+    border-bottom: 2px solid #2d5a27;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+header img { height: 32px; }
+header span { color: #888; font-size: 0.8rem; text-transform: uppercase; }
+
+nav {
+    margin-top: 70px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav button {
+    background: transparent;
+    border: 1px solid #2d5a27;
+    color: #2d5a27;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+nav button:hover, nav button.active {
+    background: #2d5a27;
+    color: #fff;
+    box-shadow: 0 0 15px #2d5a27;
+}
+
+.section-content { display: none; text-align: center; padding: 50px; }
+.section-content.active { display: block; animation: fadeIn 0.6s ease; }
+
+.hero-img { width: 200px; margin-bottom: 20px; border: 3px solid #b22222; border-radius: 10px; }
+
+h1 { color: #b22222; margin-bottom: 20px; text-transform: uppercase; }
+
+.card {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #b22222;
+    display: inline-block;
+    width: 300px;
+}
+
+.email-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px;
+    background: #b22222;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.email-link:hover { transform: scale(1.05); }
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
